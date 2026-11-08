@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Warwick Tea — 校园团餐 AI 点单：复杂要求用语言说，选择、修改与核对在界面里完成。">
+<title>Warwick Tea</title>
+<link rel="stylesheet" href="v4.css">
+</head>
+<body>
+<header class="top">
+  <a href="#p1" class="mark" aria-label="回到封面">wt<span>.</span></a>
+  <span class="top-label">WARWICK TEA · 校园团餐 AI 点单</span>
+  <a class="top-demo" href="try/" target="_blank" rel="noopener">完整 Demo ↗</a>
+</header>
+<nav class="rail" id="rail" aria-label="页码"></nav>
+
+<main id="book">
+
+<!-- 01 封面 -->
+<section class="page cover" id="p1" data-title="封面">
+  <div class="cover-copy">
+    <p class="eyebrow">WARWICK TEA · 2026</p>
+    <h1>各有偏好，<br>也能一起点好。</h1>
+    <p class="cover-intro">为社团团餐设计的 AI 点单。复杂的要求直接说，<br>选择、修改和核对在界面里完成。</p>
+    <dl class="cover-role">
+      <div><dt>角色</dt><dd>独立设计与原型</dd></div>
+      <div><dt>负责</dt><dd>用户观察 · 交互与视觉 · 组件系统 · Agent 规则</dd></div>
+    </dl>
+  </div>
+  <div class="collage" aria-hidden="true">
+    <div class="c-bubble">跟上次一样，<br>多两个素食的。</div>
+    <img class="c-cup c1" src="assets/cup-pmt.webp" alt="">
+    <img class="c-cup c2" src="assets/cup-mat.webp" alt="">
+    <img class="c-cup c3" src="assets/cup-pas.webp" alt="">
+    <img class="c-cup c4" src="assets/cup-grp.webp" alt="">
+    <div class="c-chip k1">不喝奶 4/4 ✓</div>
+    <div class="c-chip k2">素食 2/2 ✓</div>
+    <div class="c-chip k3">普通 11/11 ✓</div>
+    <div class="c-ticket"><b>wt.</b><span>B905 · 华威动漫社</span><span>17 杯 · 今天 17:30</span><i>一起点好。</i></div>
+  </div>
+</section>
+
+<!-- 02 兼职观察 -->
+<section class="page observe" id="p2" data-title="兼职观察">
+  <div class="observe-copy">
+    <p class="eyebrow">02 · 兼职观察</p>
+    <h2>一张团餐订单，<br>往往要改好几次。</h2>
+    <p class="lead">在奶茶店兼职时，我常接社团活动的集中订单。有人不喝奶，有人中途要换，确认前又多了两个人。</p>
+    <p class="lead strong">每一次变化，都要回到整张订单，重新整理、重新检查。</p>
+  </div>
+  <div class="sheet-stage">
+    <div class="sheet">
+      <div class="sheet-h"><b>wt.</b><span>柜台记录 · 社团订餐</span></div>
+      <div class="row"><span>芝士葡萄</span><b>× 6</b></div>
+      <div class="row"><span>抹茶鲜奶</span><b><s class="ev e2">× 5</s><em class="ev e2">× 4</em></b></div>
+      <div class="row"><span>珍珠奶茶 <small>燕麦奶</small></span><b>× 4</b></div>
+      <div class="row add ev e3"><span>百香果 <small>素食</small></span><b>× 2</b></div>
+      <div class="row add ev e2"><span>芒果冰沙 <small>不喝奶</small></span><b>× 1</b></div>
+      <div class="sheet-total"><span>合计</span><b><s class="ev e3">15</s> <em class="ev e3">17 杯</em></b></div>
+    </div>
+    <div class="note n1 ev e1"><small>不同要求</small>“有四个人不喝奶。”</div>
+    <div class="note n2 ev e2"><small>中途修改</small>“抹茶换一杯别的。”</div>
+    <div class="note n3 ev e3"><small>临时加人</small>“又多了两个素食的。”</div>
+  </div>
+</section>
+
+<!-- 03 AI 的作用 -->
+<section class="page role" id="p3" data-title="AI 的作用">
+  <p class="eyebrow">03 · AI 的作用</p>
+  <h2>用户可以直接说，<br>系统还要把事情理清。</h2>
+  <blockquote class="utter">“<u class="u1">跟上次一样</u>，<u class="u2">多两个素食的</u>，<u class="u3">五点半取</u>。”</blockquote>
+  <div class="split">
+    <div><b class="t1">是哪一次？</b><p>查出历史订单，由用户指定复用哪一单。</p></div>
+    <div><b class="t2">新增一个分组</b><p>查询菜单与配方，检查哪些饮品符合素食。</p></div>
+    <div><b class="t3">时段可不可用</b><p>给出可选时段，由用户确认。</p></div>
+  </div>
+  <div class="duty">
+    <div><span>AI</span><b>理解与组织</b></div>
+    <div><span>工具</span><b>查询与检查</b></div>
+    <div><span>用户</span><b>选择与确认</b></div>
+  </div>
+</section>
+
+<!-- 04 组件框架 -->
+<section class="page frame" id="p4" data-title="组件框架">
+  <div class="head">
+    <p class="eyebrow">04 · 组件设计框架</p>
+    <h2>围绕任务过程，组织交互能力。</h2>
+  </div>
+  <div class="frame-grid">
+    <div class="matrix-wrap">
+      <div class="matrix" id="matrix"></div>
+      <p class="hint-line">点一个格子，右侧渲染这一格用到的真实组件；点组件名，也能反查它在哪一格。</p>
+    </div>
+    <div class="lib">
+      <div class="lib-group" data-g="控制"><h3>输入与控制</h3><div class="chips"><span data-c="Context">Context</span><span data-c="Input">Input</span><span data-c="Progress">Progress</span><span data-c="Controls">Controls</span><span data-c="Feedback">Feedback</span></div></div>
+      <div class="lib-group"><h3>AI 回应</h3><div class="chips"><span data-c="Choice">Choice</span><span data-c="Insight">Insight</span><span data-c="Notice">Notice</span><span data-c="Comparison">Comparison</span><span data-c="Source">Source</span><span data-c="Checklist">Checklist</span><span data-c="AI 标签">AI 标签</span></div></div>
+      <div class="lib-group"><h3>点单业务</h3><div class="chips"><span data-c="历史订单卡">历史订单卡</span><span data-c="商品卡">商品卡</span><span data-c="时间选项">时间选项</span><span data-c="OrderList">OrderList</span></div></div>
+      <div class="specimen"><div class="spec-h" id="spec-h">任务前 · 意图与范围</div><iframe id="spec" src="demo/specimens.html" title="组件样例"></iframe></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 团餐流程 -->
+<section class="page flow" id="p5" data-title="团餐流程">
+  <div class="head">
+    <p class="eyebrow">05 · 团餐流程 · 边体验，边理解设计</p>
+    <h2>从哪一单开始，这次改什么？</h2>
+  </div>
+  <div class="work">
+    <aside class="guide" id="g5"></aside>
+    <div class="screen"><div class="screen-bar"><span>团餐助手 · 可操作原型</span><button class="reset" data-reset="5">重新开始 ↺</button></div><iframe id="f5" src="demo/scene.html" title="团餐流程原型"></iframe></div>
+  </div>
+</section>
+
+<!-- 06 中途修改 -->
+<section class="page flow" id="p6" data-title="中途修改">
+  <div class="head">
+    <p class="eyebrow">06 · 中途修改 · 继续同一张订单</p>
+    <h2>中途有变，怎样接着点？</h2>
+  </div>
+  <div class="work">
+    <aside class="guide" id="g6"></aside>
+    <div class="screen"><div class="screen-bar"><span>同一张订单 · 可操作原型</span><button class="reset" data-reset="6">重新开始 ↺</button></div><iframe id="f6" src="demo/scene.html" title="中途修改原型"></iframe></div>
+  </div>
+</section>
+
+<!-- 07 商品卡 -->
+<section class="page card" id="p7" data-title="商品卡">
+  <div class="head">
+    <p class="eyebrow">07 · 深入一张商品卡</p>
+    <h2>这一杯，里面有什么？</h2>
+  </div>
+  <div class="card-grid">
+    <div class="phone">
+      <div class="tabs small" role="tablist"><button role="tab" aria-selected="true" data-mode="video">看演示</button><button role="tab" aria-selected="false" data-mode="live">自己试</button></div>
+      <video id="v7" src="assets/individual-v2.mp4" muted loop playsinline preload="metadata" aria-label="单杯定制、翻面与出票演示"></video>
+      <iframe id="f7" src="demo/original-card.html?d=pmt" title="商品卡原型" hidden loading="lazy"></iframe>
+    </div>
+    <div class="decisions">
+      <article><span>01</span><h3>拖拽有参与感，点击保留速度。</h3><p>配料落进杯里，价格同步更新。</p></article>
+      <article><span>02</span><h3>正面定制，背面讲配方。</h3><p>想多了解时翻面，返回后接着定制。</p></article>
+      <article><span>03</span><h3>出一张小票，点单有个结束。</h3><p>饮品、取餐时间和单号一起打印出来。</p></article>
+      <article class="dp-art"><span>04</span><h3>同一组件，也跟着时段变。</h3><p>首页的「为你推荐」早上先给提神的，晚上先给低咖啡因的。</p></article>
+      <div class="rec">
+        <div class="rec-h"><div><b id="dp-h">☀ 早上好</b><small id="dp-d">提神的茶底排在前面</small></div><div class="seg2" role="group" aria-label="时段"><button data-dp="m" aria-pressed="true">早上</button><button data-dp="e" aria-pressed="false">晚上</button></div></div>
+        <div class="rec-cards" id="dp-cups"></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 收尾 -->
+<section class="page end" id="p8" data-title="收尾">
+  <div class="end-copy">
+    <p class="eyebrow">08 · 回到柜台</p>
+    <h2>柜台边的那张记录纸，<br>变成了一个会追问的助手。</h2>
+    <p class="lead">AI 负责理解和追问，组件让用户选择、修改和核对。<br>即使中途加人或更换饮品，也能沿着已有订单继续完成。</p>
+    <div class="end-actions"><a class="btn" href="try/" target="_blank" rel="noopener">打开完整 Demo ↗</a></div>
+  </div>
+  <div class="end-art">
+    <div class="receipt">
+      <div class="sheet-h"><b>wt.</b><span>ALL SET · TOGETHER</span></div>
+      <div class="row"><span>普通</span><b>10 / 10 ✓</b></div>
+      <div class="row"><span>不喝奶</span><b>5 / 5 ✓</b></div>
+      <div class="row"><span>素食</span><b>2 / 2 ✓</b></div>
+      <div class="sheet-total"><span>B906 · 今天 17:30</span><b>17 杯</b></div>
+      <i>各有偏好，一起点好。</i>
+    </div>
+    <img class="e-cup a" src="assets/cup-mat.webp" alt="">
+    <img class="e-cup b" src="assets/cup-mgo.webp" alt="">
+  </div>
+</section>
+
+</main>
+<script src="v4.js"></script>
+</body>
+</html>
