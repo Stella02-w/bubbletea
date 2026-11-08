@@ -22,6 +22,7 @@ jobs:
         run: |
           mkdir -p public
           unzip -q warwick-tea-pages.zip -d public
+          python3 scripts/demo_defaults.py
           test -f public/index.html
           test -f public/try/index.html
       - uses: actions/configure-pages@v5
